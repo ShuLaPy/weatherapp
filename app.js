@@ -4,7 +4,7 @@ let units = 'metric';
 let searchMethod = 'q';
 
 function searchWeather(searchTearm) {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTearm}&appid=${appID}&units=${units}`).then(result => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTearm}&appid=${appID}&units=${units}`).then(result => {
         return result.json();
     }).then(result => {
         init(result);
